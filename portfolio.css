@@ -162,7 +162,12 @@ nav a:hover {
 	transform: scale(1.2);
 	filter: invert(20%) sepia(100%) saturate(800%) hue-rotate(190deg); 
 }
-
+@media(max-width: 480px){
+	#contact img{
+		width: 28px;
+		height: 30px;
+	}
+}
 footer {
 	background: #0f172a;
 	color: #f1f5f9;
