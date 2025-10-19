@@ -164,53 +164,61 @@ nav a:hover {
 }
 @media(max-width: 480px){
 	#contact img{
-		width: 28px;
-		height: 30px;
+		width: 15px;
+		height: 15px;
 	}
 }
+#contact img {
+	width: 25px;
+	height: 25px;
+	margin-right: 8px;
+	vertical-align: middle;
+	transition: transform 0.2s ease;
+}
+#contact img:hover{
+	transform: scale(1.1);
+}
+@media (max-width: 600px) {
+	#contact img {
+		width: 20;
+		height: 20;
+	}
+}
+
 footer {
+	margin: 0;
 	background: #0f172a;
 	color: #f1f5f9;
 	text-align: center;
-	padding: 20px 10px;
-	font-size: 1rem;
-	border-top: 3px solid #2563eb;
+	padding: 15px 10px;
+	font-size: 14px;
+	width: 100%;
+	position: relative;
+	bottom: 0;
+	left: 0;
 }
 footer p{
 	margin: 0;
 	word-spacing: 10px;
+	line-height: 1.5;
 }
-#mode-toggle{
-	background: #2563eb;
-	color: #fff;
-	border: none;
-	padding: 10px 18px;
-	border-radius: 8px;
-	cursor: pointer;
-	font-weight: 500;
-	transition: o.3s;
+@media(max-width: 600px){
+	footer{
+		font-size: 12px;
+		padding: 10px 5px;
+	}
 }
-#mode-toggle{
-	background: #1e40af;
-	transform: scale(1.05);
+#typedtext.cursor: :after {
+	color: #0a66c2;
+	font-weight: 700;
+	font-size: 2rem;
+	border-right: 2px solid #0a66c2;
+	animation: blink o.7s infinite;
 }
-.dark-mode{
-	background-color: #0f172a;
-	color: #f1f5f9;
+@keyframes blink {
+	0%, 100%{ opacity:1 }
+	50% {border-color: transparent;}
 }
-.dark-mode header,
-.dark-mode #about,
-.dark-mode #projects,
-.dark-mode #contact {
-	background: #1e293b;
-	color: f1f5f9;
-	box-shadow: none;
-}
-.dark-mode a {
-	color: #93c5fd;
-}
-
-
 
 
 

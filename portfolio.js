@@ -1,11 +1,13 @@
-const toggleBtn= document.getElementById("mode-toggle");
-const body= document.body;
-toggleBtn.addEventListener("click", () =>{
-	body.classList.toggle("dark-mode");
-
-	if (body.classList.contains("dark-mode")) {
-		toggleBtn.textContent = "Light Mode";
-	} else {
-      toggleBtn.textContent = "Dark Mode"  
+const text = "Anasiudu Anthony Francis";
+const speed =120;
+let index = 0;
+const terget = document.getElementById('typedtext');
+function typewriter() {
+	if (index < text.length) {
+		terget.textContent += text[index];
+		index++;
+		setTimeout(typewriter, speed);
 	}
-});
+}
+
+typewriter();
